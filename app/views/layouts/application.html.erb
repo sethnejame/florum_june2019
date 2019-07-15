@@ -7,9 +7,25 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
   </head>
 
   <body>
+    <!-- insert navbar -->
+    <nav id='fixed-nav-bar'>
+      <div class="">
+        <ul style="display: inline-block;">
+          <li style="display: inline"><%= link_to 'FLORUM', root_path %></li>
+          <li style="display: inline"><%= link_to 'HOME', root_path %></li>
+          <li style="display: inline"><%= link_to 'MARKETPLACE', "#" %></li>
+          <li style="display: inline"><%= link_to 'FORUM', "#" %></li>
+          <li style="display: inline"><%= link_to 'Logout', "#" %></li>
+          <li style="display: inline"><%= link_to 'Login', "#" %></li>
+          <li style="display: inline"><%= link_to 'Sign up', "#" %></li>
+        </ul>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
