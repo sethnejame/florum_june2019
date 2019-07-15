@@ -5,7 +5,6 @@ Feature: Visitor Can Navigate via Navbar
 
   Scenario: Visitor Sees Navbar Links on Main Page
     When I visit the site
-    Then I should see "Menu"
     Then I should see "Home"
     Then I should see "Login"
     Then I should see "Sign Up"
