@@ -15,7 +15,18 @@
  */
 
 body {
-    font-family: 'Playfair Display';font-size: 22px;
+  font-family: 'Playfair Display';font-size: 22px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-weight: bold;
+  color: white;
 }
 
 #fixed-nav-bar {
@@ -25,5 +36,6 @@ body {
   z-index: 9999;
   width: 100%;
   height: 50px;
-  background-color: lightgreen;
+  background-color: #00CC66;
+  padding-bottom: 20px;
 }
