@@ -25,3 +25,4 @@ module CAFlorum
       generate.system_tests false
     end
   end
+end
