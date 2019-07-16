@@ -1,4 +1,8 @@
 class PostsController < ApplicationController
+  def index
+    @posts = Post.all
+  end
+
   def new
   end
 
@@ -6,8 +10,8 @@ class PostsController < ApplicationController
     @post = Post.create(post_params)
  
     if @post.persisted?
-      flash[:notice] = 'Your post was succefully created'
-      redirect_to @post
+      flash[:notice] = 'Your post was successfully created'
+      redirect_to posts_path
     else
       flash[:alert] =  'Invalid Title or Text.'
       redirect_to new_post_path 

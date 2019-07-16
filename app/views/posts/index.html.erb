@@ -1,3 +1,16 @@
 <div class= "new-post">
 <%= link_to 'New Post', new_post_path %>
-</div>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+    <% @posts.each do |post| %>
+        <td><%= post.title %></td>
+        <td><%= post.text %></td>
+    </tr>
+  <% end %>
+  
+</table>

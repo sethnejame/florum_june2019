@@ -7,12 +7,13 @@ Background:
   Given I visit the site
   And I click "FORUM"
   And I click "New Post"
-
+  
 Scenario: Visitor successfully creates a post
   When I fill the "Title" with "Flower Power"
   And I fill the "Text" with "Flower Power to the people!!"
   And I click "Post"
-  Then I should see "Your post was succefully created"
+  Then I should be on Posts index page
+  And I should see "Your post was successfully created"
   And I should see "Flower Power"
   And I should see "Flower Power to the people!!"
 
