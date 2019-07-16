@@ -7,13 +7,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = Post.create(post_params)
  
-    if @post.save
+    if @post.persisted?
       flash[:notice] = 'Your post was succefully created'
       redirect_to @post
     else
-      render 'new'
+      redirect_to new_post_path
     end
   end
 
