@@ -8,8 +8,13 @@ Given("the following user exists") do |table|
   end
 end
 
-Given("I click {string}") do |element|
-  click_on element
+Given("I am logged in as {string}") do |name|
+  user = User.find_by name: name
+  login_as user, scope: :user
+end
+
+Given("I click {string}") do |string|
+  click_on string
 end
 
 When("I fill the {string} with {string}") do |field, input|
