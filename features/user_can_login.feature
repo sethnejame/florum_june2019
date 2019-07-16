@@ -5,10 +5,10 @@ Feature: User Log in
 
 Background:
     Given the following user exists
-      |  email          | password  | name  |
-      |  john@doe.com   | password1 | John  |
+      |  email             | password     |
+      |  fatbob@gmail.com  | ilovecatfood |
     And I visit the site
-    And I click the "Log in" button
+    And I click "LOGIN"
 
 Scenario: Visitor can log in to application[Hapy path]
     When I fill the "Email" with "john@doe.com"

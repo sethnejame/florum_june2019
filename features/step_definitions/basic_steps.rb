@@ -3,19 +3,16 @@ When("I visit the site") do
   end
 
 Given("the following user exists") do |table|
-  # table is a Cucumber::MultilineArgument::DataTable
-  pending # Write code here that turns the phrase above into concrete actions
+    table.hashes.each do |user|
+        FactoryBot.create(:user, user)
+    end
 end
 
-Given("I click the {string} button") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Given("I click {string}") do |string|
+  click_on string
 end
 
 When("I fill the {string} with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-When("I click the {string} button") do |string|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
