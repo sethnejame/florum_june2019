@@ -5,9 +5,9 @@ Feature: Visitor Can Navigate via Navbar
 
   Scenario: Visitor Sees Navbar Links on Main Page
       Given I visit the site
-      Then I should see "HOME"
-      Then I should see "LOGIN"
-      Then I should see "SIGN UP"
-      Then I should see "MARKETPLACE"
-      Then I should see "FORUM"
+      And I should see "HOME"
+      And I should see "LOGIN"
+      And I should see "SIGN UP"
+      And I should see "MARKETPLACE"
+      And I should see "FORUM"
   
