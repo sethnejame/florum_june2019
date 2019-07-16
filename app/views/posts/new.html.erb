@@ -4,12 +4,12 @@
 <%= form_with scope: :article, url: posts_path, local: true do |form| %>
     <p>
       <%= form.label :title %><br>
-      <%= form.text_field :title %>
+      <%= form.text_field :title, placeholder: 'Title' %>
     </p>
    
     <p>
       <%= form.label :text %><br>
-      <%= form.text_area :text %>
+      <%= form.text_area :text, placeholder: 'Text' %>
     </p>
    
     <p>

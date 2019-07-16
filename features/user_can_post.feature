@@ -10,7 +10,7 @@ Background:
 
 Scenario: Successfully create an post
     When I fill the "Title" with "Flower Power"
-    And I fill the "Text' with 'Flower Power to the people!!"
+    And I fill the "Text" with "Flower Power to the people!!"
     And I click "Post"
     Then I should see "Your post was succefully created"
     And I should see "Flower Power"
