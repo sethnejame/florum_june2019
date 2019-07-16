@@ -6,5 +6,6 @@ FactoryBot.define do
     latest_posts { "MyString" }
     about_me { "MyString" }
     profile_pic { "MyString" }
+    user
   end
 end
