@@ -13,5 +13,5 @@ Feature: User Sign Up
         And I fill the "Email" with "fatbob@gmail.com"
         And I fill the "Password" with "ilovecatfood"
         And I click "Sign up"
-        Then I should see "Welcome to Florum!"
+        Then I should see "Welcome! You have signed up successfully."
             
