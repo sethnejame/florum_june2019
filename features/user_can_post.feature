@@ -5,6 +5,10 @@ Feature: Create posts
 
 Background:
   Given I visit the site
+  And the following user exists
+    |  email             | password     |  name   |
+    |  fatbob@gmail.com  | ilovecatfood | Fat Bob |
+  And I am logged in as 'fatbob@gmail.com'
   And I click "FORUM"
   And I click "New Post"
   
