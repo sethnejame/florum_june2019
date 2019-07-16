@@ -29,6 +29,10 @@ a:hover {
   color: white;
 }
 
+li {
+  display: inline;
+}
+
 #fixed-nav-bar {
   position: fixed;
   top: 0;
