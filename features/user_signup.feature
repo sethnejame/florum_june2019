@@ -6,7 +6,6 @@ Feature: User Sign Up
     Background:
         Given I visit the site
         
-
     Scenario: Visitor can sign up for an account
         When I click "SIGN UP"
         And I fill the "Name" with "Fat Bob"
