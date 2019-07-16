@@ -13,7 +13,8 @@ class PostsController < ApplicationController
       flash[:notice] = 'Your post was succefully created'
       redirect_to @post
     else
-      redirect_to new_post_path
+      flash[:alert] =  'Invalid Title or Text.'
+      redirect_to new_post_path 
     end
   end
 
