@@ -16,3 +16,5 @@ Scenario: User Can Log Out
     And I should not see "SIGN UP"
     And I click "LOGOUT"
     Then I should see "Signed out successfully."
+    And I should see "LOGIN"
+    And I should see "SIGN UP"
