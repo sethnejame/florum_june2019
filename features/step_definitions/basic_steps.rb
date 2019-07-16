@@ -12,8 +12,8 @@ Given("I click {string}") do |string|
   click_on string
 end
 
-When("I fill the {string} with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+When("I fill the {string} with {string}") do |field, input|
+    fill_in field, with: input
 end
 
 
