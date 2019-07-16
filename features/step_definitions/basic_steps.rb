@@ -8,8 +8,8 @@ Given("the following user exists") do |table|
     end
 end
 
-Given("I click {string}") do |string|
-  click_on string
+Given("I click {string}") do |element|
+  click_on element
 end
 
 When("I fill the {string} with {string}") do |field, input|
