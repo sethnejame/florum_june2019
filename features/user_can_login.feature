@@ -12,12 +12,12 @@ Background:
 
 Scenario: Visitor can log in to application[Hapy path]
     When I fill the "Email" with "fatbob@gmail.com"
-    And I fill the "Password" with "password1"
-    And I click "LOGIN"
+    And I fill the "Password" with "ilovecatfood"
+    And I click "Log in"
     Then I should see "Signed in successfully"
     
 Scenario: Visitor can't log in with invalid credentials[Sad path]
     When I fill the "Email" with ""
     And I fill the "Password" with ""
-    And I click the "LOGIN"
+    And I click "Log in"
     Then I should see "Invalid Email or password"
