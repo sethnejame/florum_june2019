@@ -1,0 +1,17 @@
+<div class= "new-post">
+  <%= link_to 'New Post', new_post_path %>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+      <th>Writen By</th>
+    </tr>
+    <tr>
+      <% @posts.each do |post| %>
+          <td><%= post.title %></td>
+          <td><%= post.text %></td>
+          <td><%= post.user.name %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

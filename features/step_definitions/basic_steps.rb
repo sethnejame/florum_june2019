@@ -1,15 +1,15 @@
 When("I visit the site") do
-    visit root_path
-  end
-
-Given("the following user exists") do |table|
-    table.hashes.each do |user|
-        FactoryBot.create(:user, user)
-    end
+  visit root_path
 end
 
-Given("I am logged in as {string}") do |name|
-  user = User.find_by name: name
+Given("the following user(s) exists") do |table|
+  table.hashes.each do |user_hash|
+    FactoryBot.create(:user, user_hash)
+  end
+end
+
+Given("I am logged in as {string}") do |text|
+  user = User.find_by(email: text) || User.find_by(name: text)
   login_as user, scope: :user
 end
 
@@ -18,7 +18,11 @@ Given("I click {string}") do |string|
 end
 
 When("I fill the {string} with {string}") do |field, input|
-    fill_in field, with: input
+  fill_in field, with: input
+end
+
+Then("show me the page") do
+  save_and_open_page
 end
 
 
