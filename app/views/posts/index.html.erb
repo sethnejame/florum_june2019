@@ -5,11 +5,13 @@
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th>Writen By</th>
   </tr>
 
     <% @posts.each do |post| %>
         <td><%= post.title %></td>
         <td><%= post.text %></td>
+        <td><%= post.user.name %></td>
     </tr>
   <% end %>
   
