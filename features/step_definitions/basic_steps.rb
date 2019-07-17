@@ -21,5 +21,9 @@ When("I fill the {string} with {string}") do |field, input|
   fill_in field, with: input
 end
 
+Then("show me the page") do
+  save_and_open_page
+end
+
 
 
