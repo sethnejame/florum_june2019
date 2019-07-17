@@ -2,14 +2,14 @@ When("I visit the site") do
   visit root_path
 end
 
-Given("the following user exists") do |table|
-  table.hashes.each do |user|
-    FactoryBot.create(:user, user)
+Given("the following user(s) exists") do |table|
+  table.hashes.each do |user_hash|
+    FactoryBot.create(:user, user_hash)
   end
 end
 
-Given("I am logged in as {string}") do |name|
-  user = User.find_by name: name
+Given("I am logged in as {string}") do |email|
+  user = User.find_by(email: email)
   login_as user, scope: :user
 end
 
