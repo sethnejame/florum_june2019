@@ -11,6 +11,7 @@ end
 Given("I am logged in as {string}") do |email|
   user = User.find_by(email: email)
   login_as user, scope: :user
+  binding.pry
 end
 
 Given("I click {string}") do |string|
