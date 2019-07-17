@@ -1,12 +1,12 @@
 Feature: User Log in
-  As a user,
+  "As a user,
   In order to make an order
-  I would like to be able to log in
+  I would like to be able to log in"
 
   Background:
     Given the following user exists
-      |  email             | password     |
-      |  fatbob@gmail.com  | ilovecatfood |
+      | email            | password     |
+      | fatbob@gmail.com | ilovecatfood |
     And I visit the site
     And I click "LOGIN"
 
@@ -15,7 +15,7 @@ Feature: User Log in
     And I fill the "Password" with "ilovecatfood"
     And I click "Log in"
     Then I should see "Signed in successfully"
-    
+
   Scenario: Visitor can't log in with invalid credentials[Sad path]
     When I fill the "Email" with ""
     And I fill the "Password" with ""

@@ -5,6 +5,12 @@ RSpec.describe User, type: :model do
     it { is_expected.to have_db_column :name }
     it { is_expected.to have_db_column :email }
     it { is_expected.to have_db_column :encrypted_password }
+    it { is_expected.to have_db_column :location }
+    it { is_expected.to have_db_column :my_plants }
+    it { is_expected.to have_db_column :fav_flora }
+    it { is_expected.to have_db_column :latest_posts }
+    it { is_expected.to have_db_column :about_me}
+    it { is_expected.to have_db_column :profile_pic }
   end
 
   describe 'Validations' do

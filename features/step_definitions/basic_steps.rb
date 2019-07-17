@@ -8,8 +8,8 @@ Given("the following user(s) exists") do |table|
   end
 end
 
-Given("I am logged in as {string}") do |email|
-  user = User.find_by(email: email)
+Given("I am logged in as {string}") do |text|
+  user = User.find_by(email: text) || User.find_by(name: text)
   login_as user, scope: :user
 end
 
