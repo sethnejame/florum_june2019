@@ -4,11 +4,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = current_user.post.build
+    @post = current_user.posts.build
   end
 
   def create
-    @post = current_user.post.build(post_params)
+    @post = current_user.posts.build(post_params)
  
     if @post.persisted?
       flash[:notice] = 'Your post was successfully created'
