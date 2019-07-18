@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   root controller: :main, action: :index
   resources :posts, only: [:new, :create, :index]
+  resources :plants, only: [:new, :create, :index]
 end
