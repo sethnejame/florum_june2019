@@ -9,3 +9,7 @@ end
 Then("I should be on Posts index page") do
   expect(current_path).to eq posts_path
 end
+
+Then("I should be on Profile page") do
+  expect(current_path).to eq user_path
+end

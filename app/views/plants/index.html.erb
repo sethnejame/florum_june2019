@@ -1,6 +1,6 @@
 <div class= "new-post">
   <h1>My Plants</h1>
-    <% @user.plants.each do |plant| %>
+    <% @current_user.plants.each do |plant| %>
       <p>Name: <%= plant.name %></p>
       <p>Details: <%= plant.details %></p>
       <p>Price: <%= plant.price %></p>

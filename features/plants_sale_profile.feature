@@ -19,8 +19,8 @@ Feature: Plant selling
     And I fill the "Category" with "Flower"
     And I fill the "Quantity" with "1"
     And I click "Sell"
-    Then I should be on Profile page
-    And I should see "Your plant is now for sale"
+    And I should be on Profile page
+    And I should see "Your plant is now for sale!"
     And I should see "Lovely Lily"
     And I should see "Cutest Lily in Stockholm"
     And I should see "50"
