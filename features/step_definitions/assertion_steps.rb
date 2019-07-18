@@ -11,5 +11,5 @@ Then("I should be on Posts index page") do
 end
 
 Then("I should be on Profile page") do
-  expect(current_path).to eq user_path
+  expect(current_path).to eq user_path(:id)
 end

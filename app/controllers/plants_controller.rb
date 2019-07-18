@@ -13,10 +13,10 @@ class PlantsController < ApplicationController
     
         if @plant.persisted?
           flash[:notice] = 'Your plant is now for sale!'
-          redirect_to plants_path
+          redirect_to user_path(current_user)
         else
           flash[:alert] = 'Invalid Title or Text.'
-          redirect_to new_post_path
+          redirect_to new_plant_path
         end
       end
 
