@@ -5,8 +5,8 @@ I would like to able to delete it."
 
   Background:
     Given the following post exists
-    | title        | text          | user_name    |
-    | Codeacademy  | Smooth-ride   | hackerman    |
+    | title        | text          | 
+    | Codeacademy  | Smooth-ride   | 
     And the following user exists
     | name    | email            | password     |
     | Fat Bob | fatbob@gmail.com | ilovecatfood |
