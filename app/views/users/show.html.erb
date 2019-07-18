@@ -3,12 +3,11 @@
   <ul>
     <li><%= "#{@user.about_me}" %></li>
     <li><%= "#{@user.location}" %></li>
-    <li><%= "#{@user.my_plants}" %></li>
     <li><%= "#{@user.fav_flora}" %></li>
     <li><%= "#{@user.latest_posts}" %></li>
     <li><%= "#{@user.profile_pic}" %></li>
   </ul>
   <%= render partial: 'partials/plants' %>
-  <%= link_to 'New Plant for Sale', new_plant_path %>
+  <%= link_to 'Sell plants', new_plant_path %>
 
 </div>

@@ -19,16 +19,6 @@ body {
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  font-weight: bold;
-  color: white;
-}
-
 li {
   display: inline;
 }
@@ -42,6 +32,23 @@ li {
   height: 50px;
   background-color: #00CC66;
   padding-bottom: 20px;
+}
+
+#fixed-nav-bar a:link { 
+  color: black;
+  text-decoration: none;
+}
+#fixed-nav-bar a:visited { 
+  color: black;
+  text-decoration: none;
+}
+#fixed-nav-bar a:hover { 
+  color: white; 
+  font-weight: bold;
+}
+#fixed-nav-bar a:active { 
+  color: black;
+  text-decoration: none;
 }
 
 .new-post {

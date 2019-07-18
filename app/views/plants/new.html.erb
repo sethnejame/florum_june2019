@@ -3,12 +3,12 @@
 <%= form_with model: @plant, local: true do |form| %>
   <div>
     <%= form.label :name %><br>
-    <%= form.text_field :name, placeholder: 'What plant would you like to sell?' %>
+    <%= form.text_field :name, placeholder: 'Plant name' %>
   </div>
    
   <div>
     <%= form.label :details %><br>
-    <%= form.text_area :details, placeholder: 'Add details about your plant here' %>
+    <%= form.text_area :details, placeholder: 'Describe your plant' %>
   </div>
 
   <div>
@@ -16,10 +16,10 @@
     <%= form.text_area :price, placeholder: 'Price' %>
   </div>
 
-  # Change this to select list and multiply price by quantity
+  <%# Change this to select list and multiply price by quantity %>
   <div>
     <%= form.label :quantity %><br>
-    <%= form.text_area :quantity, placeholder: 'How many plant do you have?' %>
+    <%= form.text_area :quantity, placeholder: 'Number of plants' %>
   </div>
    
   <div>
