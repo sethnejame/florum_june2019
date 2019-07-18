@@ -2,6 +2,12 @@ When("I visit the site") do
   visit root_path
 end
 
+Given("the following post exists") do |table|
+  table.hashes.each do |post_hash|
+    FactoryBot.create(:post, post_hash)
+  end
+end
+
 Given("the following user(s) exists") do |table|
   table.hashes.each do |user_hash|
     FactoryBot.create(:user, user_hash)
