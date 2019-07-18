@@ -1,0 +1,19 @@
+<div class= "new-post">
+  <h1>My Plants</h1>
+    <table>
+    <tr>
+      <th>Name</th>
+      <th>Details</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+    <tr>
+      <% @plants.each do |post| %>
+          <td><%= plant.name %></td>
+          <td><%= plant.details %></td>
+          <td><%= plant.price %></td>
+          <td><%= plant.quantity %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

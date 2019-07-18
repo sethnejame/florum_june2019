@@ -10,6 +10,17 @@
     <%= form.label :details %><br>
     <%= form.text_area :details, placeholder: 'Add details about your plant here' %>
   </div>
+
+  <div>
+    <%= form.label :price %><br>
+    <%= form.text_area :price, placeholder: 'Price' %>
+  </div>
+
+  # Change this to select list and multiply price by quantity
+  <div>
+    <%= form.label :quantity %><br>
+    <%= form.text_area :quantity, placeholder: 'How many plant do you have?' %>
+  </div>
    
   <div>
     <%= form.submit value: "Sell" %>
