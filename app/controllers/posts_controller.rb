@@ -23,7 +23,21 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    if post_owner
+      @post.destroy
+    else
+      flash[:notice] = 'Access denied as you are not owner of this post'
+    end
+    redirect_to posts_path  
+  end
+
   private
+
+  def post_owner
+    @post.user.id == current_user.id
+  end
 
   def post_params
     params.require(:post).permit(:title, :text)
