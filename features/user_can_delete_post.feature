@@ -5,9 +5,9 @@ I would like to able to delete it."
 
   Background:
     Given the following user exists
-    | name     | email             | password     |
-    | Fat Bob  | fatbob@gmail.com  | ilovecatfood |
-    | Slim Jim | slimjum@gmail.com | password123  |
+    | name     |
+    | Fat Bob  |
+    | Slim Jim |
     And the following post exists
     | title        | text          | user    |
     | Codeacademy  | Smooth-ride   | Fat Bob |
