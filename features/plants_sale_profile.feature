@@ -24,3 +24,4 @@ Feature: Plant selling
     And I should see "Lovely Lily"
     And I should see "Cutest Lily in Stockholm"
     And I should see "50"
+    And I should see "Buy this plant!"

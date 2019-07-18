@@ -10,13 +10,20 @@
 
   <%= link_to 'Sell plants', new_plant_path %>
 
-  <div id "plants-list">
-  <h1>My Plants</h1>
-    <% @user.plants.each do |plant| %>
-      <p>Name: <%= plant.name %></p>
-      <p>Details: <%= plant.details %></p>
-      <p>Price: <%= plant.price %></p>
-      <p>Quantity: <%= plant.quantity %></p>
-    <% end %>
+  <div id="plants-list">
+  
+  <h3><%= "#{@user.name}'s Plants" %></h3>
+    <div id="sub-plants">
+      <ul>
+        <% @user.plants.each do |plant| %>
+          <h4 style="padding: 0px; margin: 0px"><%= plant.name %></h4>
+          <li><%= plant.details %></li>
+          <li><%= plant.price %> SEK</li>
+          <li>Quantity: <%= plant.quantity %></li>
+          <%= link_to 'Buy this plant!', '#' %>
+          <br>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>
