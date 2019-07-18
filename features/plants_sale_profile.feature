@@ -13,9 +13,11 @@ Feature: Plant selling
     And I click "Sell plants"
 
   Scenario: User successfully put up plant for sale
-    When I fill the "Title" with "Lovely Lily"
-    And I fill the "Text" with "Cutest Lily in Stockholm"
+    When I fill the "Name" with "Lovely Lily"
+    And I fill the "Details" with "Cutest Lily in Stockholm"
     And I fill the "Price" with "50"
+    And I fill the "Category" with "Flower"
+    And I fill the "Quantity" with "1"
     And I click "Sell"
     Then I should be on Profile page
     And I should see "Your plant is now for sale"
