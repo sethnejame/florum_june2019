@@ -17,7 +17,7 @@ Feature: Open up posts
   Scenario: Reader can open up posts
     When I visit the site
     And I click "FORUM"
-    And I click "Open" 
+    And I click on "Open" 
     Then I should see "Title: Codeacademy"
     And I should see "Text: Smooth-ride"
     And I should see "Author: Fat Bob"
