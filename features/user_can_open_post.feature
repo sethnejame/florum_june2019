@@ -18,4 +18,3 @@ Feature: Open up posts
     And I click "Open"
     Then I should see "Title: Codeacademy"
     And I should see "Text: Smooth-ride"
-    
