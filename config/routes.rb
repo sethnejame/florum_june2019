@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:show]
   root controller: :main, action: :index
-  resources :posts, only: [:new, :create, :index, :show]
+  resources :plants, only: [:new, :create, :index]
+  resources :posts, only: [:new, :create, :index, :show, :destroy]
 end
