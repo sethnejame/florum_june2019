@@ -5,8 +5,8 @@ Feature: Open up posts
 
   Background:
     Given the following post exists
-    | title        | text          | 
-    | Codeacademy  | Smooth-ride   | 
+    | title        | text          | user_name    |
+    | Codeacademy  | Smooth-ride   | hackerman    |
     And the following user exists
     | name    | email            | password     |
     | Fat Bob | fatbob@gmail.com | ilovecatfood |
