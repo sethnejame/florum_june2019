@@ -12,17 +12,17 @@
   <div id="plants-list">
   
   <h3><%= "#{@user.name}'s Plants" %></h3>
-    <div id="sub-plants">
       <ul>
         <% @user.plants.each do |plant| %>
+          <div class="sub-plants">
           <h4 style="padding: 0px; margin: 0px"><%= plant.name %></h4>
           <li><%= plant.details %></li>
           <li><%= plant.price %> SEK</li>
           <li>Quantity: <%= plant.quantity %></li>
           <%= link_to 'Buy this plant!', '#' %>
           <br>
+          </div>
         <% end %>
       </ul>
-    </div>
   </div>
 </div>

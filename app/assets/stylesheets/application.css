@@ -66,6 +66,7 @@ body {
   margin-left: 100px;
 }
 
-#sub-plants {
+.sub-plants {
   display: inline-block;
+  padding: 40px;
 }
