@@ -3,6 +3,10 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, execpt: [:index]
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def index
     @posts = Post.all
   end
