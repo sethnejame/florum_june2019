@@ -1,7 +1,7 @@
 Feature: Plant selling
   "As a user,
   In order to share my plants for sale,
-	I would like to list plants that I want to sell on profile page"
+  I would like to be able to add a listing for them to my profile page"
 
   Background:
     Given the following user exists
