@@ -20,12 +20,16 @@ Given("I am logged in as {string}") do |text|
   login_as user, scope: :user
 end
 
-Given("I click {string}") do |string|
-  click_on string
-end
-
 When("I fill the {string} with {string}") do |field, input|
   fill_in field, with: input
+end
+
+When("I click on {string}") do |string|
+  first(:link, string).click
+end
+
+When("I click {string}") do |string|
+  click_on string
 end
 
 Then("show me the page") do
