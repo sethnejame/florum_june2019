@@ -12,3 +12,27 @@
   <strong>Author:</strong>
   <%= @post.user.name %>
 </p>
+
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= current_user.name %>
+  </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+ 
+<h2>Add a comment:</h2>
+<%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
