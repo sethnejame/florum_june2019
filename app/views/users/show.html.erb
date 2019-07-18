@@ -7,7 +7,16 @@
     <li><%= "#{@user.latest_posts}" %></li>
     <li><%= "#{@user.profile_pic}" %></li>
   </ul>
-  <%# <%= render 'plants/index' %> %>
+
   <%= link_to 'Sell plants', new_plant_path %>
 
+  <div id "plants-list">
+  <h1>My Plants</h1>
+    <% @user.plants.each do |plant| %>
+      <p>Name: <%= plant.name %></p>
+      <p>Details: <%= plant.details %></p>
+      <p>Price: <%= plant.price %></p>
+      <p>Quantity: <%= plant.quantity %></p>
+    <% end %>
+  </div>
 </div>
