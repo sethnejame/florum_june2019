@@ -19,17 +19,7 @@ body {
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  font-weight: bold;
-  color: white;
-}
-
-li {
+#fixed-nav-bar li {
   display: inline;
 }
 
@@ -44,6 +34,39 @@ li {
   padding-bottom: 20px;
 }
 
+#fixed-nav-bar a:link { 
+  color: black;
+  text-decoration: none;
+}
+#fixed-nav-bar a:visited { 
+  color: black;
+  text-decoration: none;
+}
+#fixed-nav-bar a:hover { 
+  color: white; 
+  font-weight: bold;
+}
+#fixed-nav-bar a:active { 
+  color: black;
+  text-decoration: none;
+}
+
 .new-post {
   margin-top: 200px;
+}
+
+.profile {
+  margin-top: 200px;
+}
+
+#plants-list {
+  text-align: left;
+  font-size: 18px;
+  width: 80%;
+  margin-left: 100px;
+}
+
+.sub-plants {
+  display: inline-block;
+  padding: 40px;
 }
