@@ -9,9 +9,9 @@ class PlantsController < ApplicationController
   end
     
   def create
-    @plant = current_user.plants.create(plant_params)
+    plant = current_user.plants.create(plant_params)
     
-    if @plant.persisted?
+    if plant.persisted?
       flash[:notice] = 'Your plant is now for sale!'
       redirect_to user_path(current_user)
     else
