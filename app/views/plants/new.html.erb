@@ -16,12 +16,16 @@
     <%= form.text_area :price, placeholder: 'Price' %>
   </div>
 
-  <%# Change this to select list and multiply price by quantity %>
+  <div>
+    <%= form.label :category %><br>
+    <%= form.text_area :category, placeholder: 'Category' %>
+  </div>
+
   <div>
     <%= form.label :quantity %><br>
-    <%= form.text_area :quantity, placeholder: 'Number of plants' %>
+    <%= form.text_area :quantity, placeholder: 'Quantity' %>
   </div>
-   
+
   <div>
     <%= form.submit value: "Sell" %>
   </div>
