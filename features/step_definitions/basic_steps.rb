@@ -4,7 +4,8 @@ end
 
 Given("the following post exists") do |table|
   table.hashes.each do |post_hash|
-    FactoryBot.create(:post, post_hash)
+    user = User.find_by_name(post_hash[:user])
+    FactoryBot.create(:post, post_hash.merge(user: user))
   end
 end
 

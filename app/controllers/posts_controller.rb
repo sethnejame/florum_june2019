@@ -2,7 +2,6 @@
 
 class PostsController < ApplicationController
   before_action :authenticate_user!, execpt: [:index]
-  before_action :post_owner, only: [:destroy]
 
   def index
     @posts = Post.all
@@ -24,21 +23,21 @@ class PostsController < ApplicationController
     end
   end
 
-  def post_owner
-    @post = Post.find(params[:id])
-    unless @post.user.id == current_user.id
-     flash[:notice] = 'Access denied as you are not owner of this post'
-     redirect_to posts_path
-    end
-   end
-
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to posts_path
+    if post_owner
+      @post.destroy
+    else
+      flash[:notice] = 'Access denied as you are not owner of this post'
+    end
+    redirect_to posts_path  
   end
 
   private
+
+  def post_owner
+    @post.user.id == current_user.id
+  end
 
   def post_params
     params.require(:post).permit(:title, :text)
