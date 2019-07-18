@@ -4,19 +4,21 @@ Feature: Open up posts
   I would like to be able to open it."
 
   Background:
-    Given the following post exists
-    | title        | text          | user_name |
-    | Codeacademy  | Smooth-ride   | user1     |
-    And the following user exists
-    | name    | email            | password     |
-    | Fat Bob | fatbob@gmail.com | ilovecatfood |
+    Given the following user exists
+    | name    |
+    | Fat Bob |
+    | Slim Jim|
+    And the following post exists
+    | title        | text          | user     |
+    | Codeacademy  | Smooth-ride   | Fat Bob  |
+    | Hacklife     | smaaaahht     | Slim Jim |
     And I am logged in as "Fat Bob"  
    
   Scenario: Reader can open up posts
     When I visit the site
     And I click "FORUM"
-    And I click "Open"
+    And I click "Open" 
     Then I should see "Title: Codeacademy"
     And I should see "Text: Smooth-ride"
-    And I should see "Author: user1"
+    And I should see "Author: Fat Bob"
     
