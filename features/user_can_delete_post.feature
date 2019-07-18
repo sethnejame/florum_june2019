@@ -24,5 +24,4 @@ I would like to able to delete it."
     When I am logged in as "Slim Jim" 
     And I visit the site
     And I click "FORUM"
-    And I click "Delete"
-    Then I should see "Access denied as you are not owner of this post"
+    Then I should not see "Delete"
