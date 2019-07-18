@@ -5,8 +5,8 @@ Feature: Open up posts
 
   Background:
     Given the following post exists
-    | title        | text          | user_name    |
-    | Codeacademy  | Smooth-ride   | hackerman    |
+    | title        | text          | user_name |
+    | Codeacademy  | Smooth-ride   | user1     |
     And the following user exists
     | name    | email            | password     |
     | Fat Bob | fatbob@gmail.com | ilovecatfood |
@@ -18,3 +18,5 @@ Feature: Open up posts
     And I click "Open"
     Then I should see "Title: Codeacademy"
     And I should see "Text: Smooth-ride"
+    And I should see "Author: user1"
+    
