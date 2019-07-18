@@ -3,15 +3,15 @@ Feature: Open up posts
   In order to interact with a post
   I would like to be able to open it."
 
- Background:
-   Given the following post exists
-    | title        | text          |  user      |
-    | Codeacademy  | Smooth-ride   |  hackerman | 
-   And the following user exists
+  Background:
+    Given the following post exists
+    | title        | text          | 
+    | Codeacademy  | Smooth-ride   | 
+    And the following user exists
     | name    | email            | password     |
     | Fat Bob | fatbob@gmail.com | ilovecatfood |
-   And I am logged in as "Fat Bob"  
+    And I am logged in as "Fat Bob"  
    
-Scenario: Reader can open up posts
+  Scenario: Reader can open up posts
     When I visit the site
     Then I click "Open"
