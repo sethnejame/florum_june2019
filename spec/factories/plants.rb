@@ -5,5 +5,6 @@ FactoryBot.define do
     price { 1 }
     category { "MyString" }
     quantity { 1 }
+    association :user
   end
 end
