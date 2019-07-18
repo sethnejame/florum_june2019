@@ -21,4 +21,8 @@ Feature: Open up posts
     Then I should see "Title: Codeacademy"
     And I should see "Text: Smooth-ride"
     And I should see "Author: Fat Bob"
+    And I should not see "Title: Hacklife"
+    And I should not see "Text: smaaaahht"
+    And I should not see "Author: Slim Jim"
+
     
