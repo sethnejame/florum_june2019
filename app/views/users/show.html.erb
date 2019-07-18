@@ -8,4 +8,7 @@
     <li><%= "#{@user.latest_posts}" %></li>
     <li><%= "#{@user.profile_pic}" %></li>
   </ul>
+  <%= render partial: 'partials/plants' %>
+  <%= link_to 'New Plant for Sale', new_plant_path %>
+
 </div>
