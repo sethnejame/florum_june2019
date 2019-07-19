@@ -18,9 +18,11 @@ ActiveRecord::Schema.define(version: 2019_07_18_195958) do
   create_table "comments", force: :cascade do |t|
     t.text "body"
     t.bigint "post_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "plants", force: :cascade do |t|
@@ -37,18 +39,6 @@ ActiveRecord::Schema.define(version: 2019_07_18_195958) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-  end
-
-  create_table "profiles", force: :cascade do |t|
-    t.string "city"
-    t.string "my_plants"
-    t.string "favorite_flora"
-    t.string "latest_posts"
-    t.string "about_me"
-    t.string "profile_pic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
@@ -73,4 +63,5 @@ ActiveRecord::Schema.define(version: 2019_07_18_195958) do
   end
 
   add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users"
 end
