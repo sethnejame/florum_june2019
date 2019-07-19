@@ -8,3 +8,7 @@ Feature: Basic Florum Categories
 
   Scenario: Visitor can see basic forum categories
     When I click "FLORUM"
+    Then I should see "MARKETPLACE"
+    Then I should see "GENERAL"
+    Then I should see "GROWTH & CARE"
+    Then I should see "PLANT NEWS"
