@@ -17,7 +17,6 @@ Feature: Open up posts
   Scenario: Reader can open up posts
     When I visit the site
     And I click "FLORUM"
-    Then I should see "MARKETPLACE"
     And I click on "Open" 
     Then I should see "Title: Codeacademy"
     And I should see "Text: Smooth-ride"

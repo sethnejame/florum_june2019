@@ -37,6 +37,6 @@ Then("show me the page") do
 end
 
 When("I select {string} from {string}") do |option, selector|
-  select(option, :from => selector)
+  select option, :from => selector
 end
 
