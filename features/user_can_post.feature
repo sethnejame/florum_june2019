@@ -15,7 +15,7 @@ Feature: Create posts
   Scenario: Visitor successfully creates a post
     When I fill the "Title" with "Flower Power"
     And I fill the "Text" with "Flower Power to the people!!"
-    And I select "General"
+    And I select "General" from "Category"
     And I click "Post"
     Then I should be on Posts index page
     And I should see "Your post was successfully created"
