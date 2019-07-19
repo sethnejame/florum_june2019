@@ -9,9 +9,9 @@ Feature: Basic Florum Categories
     | Fat Bob |
     | Slim Jim|
     And the following post exists
-    | title        | text          | user     | category |
-    | Codeacademy  | Smooth-ride   | Fat Bob  | general  |
-    | Hacklife     | smaaaahht     | Slim Jim | general  |
+    | title        | text          | user     | category     |
+    | Codeacademy  | Smooth-ride   | Fat Bob  | general      |
+    | Hacklife     | smaaaahht     | Slim Jim | marketplace  |
     And I am logged in as "Fat Bob" 
 
   Scenario: Visitor can see basic forum categories

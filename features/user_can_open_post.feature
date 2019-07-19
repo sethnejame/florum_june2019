@@ -9,9 +9,9 @@ Feature: Open up posts
     | Fat Bob |
     | Slim Jim|
     And the following post exists
-    | title        | text          | user     |
-    | Codeacademy  | Smooth-ride   | Fat Bob  |
-    | Hacklife     | smaaaahht     | Slim Jim |
+    | title        | text          | user     | category    |
+    | Codeacademy  | Smooth-ride   | Fat Bob  | general     |
+    | Hacklife     | smaaaahht     | Slim Jim | marketplace |
     And I am logged in as "Fat Bob"  
    
   Scenario: Reader can open up posts
