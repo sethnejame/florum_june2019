@@ -18,7 +18,7 @@
 <% @post.comments.each do |comment| %>
   <p>
     <strong>Commenter:</strong>
-    <%= current_user.name %>
+    <%= comment.user.name %>
   </p>
  
   <p>
