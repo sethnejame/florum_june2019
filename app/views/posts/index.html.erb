@@ -1,70 +1,83 @@
 <div class="container">
+
   <div class="forum-category">
     <h3>MARKETPLACE</h3>
     <ul>
-    <% @posts.category.marketplace each do |post| %>
-    <h4><%= @post.title %></h4>
-    <li><%= @post.text %></li>
-    <li><strong>by</strong><%= @post.user.name %></li>
-    <%= link_to 'Open', post_path(post) %>
-          <% if post.user.id == current_user.id %>
-            <%=link_to 'Delete', post_path(post),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-          <% end %>
-    <% end %>
+      <% if @posts.category === 'marketplace' %>
+        <% @posts.each do |post| %>
+          <h4><%= @post.title %></h4>
+          <li><%= @post.text %></li>
+          <li><strong>by</strong><%= @post.user.name %></li>
+          <%= link_to 'Open', post_path(post) %>
+                <% if post.user.id == current_user.id %>
+                  <%=link_to 'Delete', post_path(post),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+                <% end %>
+        <% end %>
+      <% end %>
+    </ul>
   </div>
   <%= link_to 'New Post', new_post_path %>
 
   <div class="forum-category">
     <h3>GENERAL</h3>
     <ul>
-    <% @posts.category.general each do |post| %>
-    <h4><%= @post.title %></h4>
-    <li><%= @post.text %></li>
-    <li><strong>by</strong><%= @post.user.name %></li>
-    <%= link_to 'Open', post_path(post) %>
-          <% if post.user.id == current_user.id %>
-            <%=link_to 'Delete', post_path(post),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-          <% end %>
-    <% end %>
+      <% if @posts.category === 'general' %>
+        <% @posts.each do |post| %>
+          <h4><%= @post.title %></h4>
+          <li><%= @post.text %></li>
+          <li><strong>by</strong><%= @post.user.name %></li>
+          <%= link_to 'Open', post_path(post) %>
+                <% if post.user.id == current_user.id %>
+                  <%=link_to 'Delete', post_path(post),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+                <% end %>
+        <% end %>
+      <% end %>
+    </ul>
   </div>
   <%= link_to 'New Post', new_post_path %>
 
   <div class="forum-category">
     <h3>GROWTH & CARE</h3>
     <ul>
-    <% @posts.category.growth_and_care each do |post| %>
-    <h4><%= @post.title %></h4>
-    <li><%= @post.text %></li>
-    <li><strong>by</strong><%= @post.user.name %></li>
-    <%= link_to 'Open', post_path(post) %>
-          <% if post.user.id == current_user.id %>
-            <%=link_to 'Delete', post_path(post),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-          <% end %>
-    <% end %>
+      <% if @posts.category === 'growth_and_care' %>
+        <% @posts.each do |post| %>
+          <h4><%= @post.title %></h4>
+          <li><%= @post.text %></li>
+          <li><strong>by</strong><%= @post.user.name %></li>
+          <%= link_to 'Open', post_path(post) %>
+                <% if post.user.id == current_user.id %>
+                  <%=link_to 'Delete', post_path(post),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+                <% end %>
+        <% end %>
+      <% end %>
+    </ul>
   </div>
   <%= link_to 'New Post', new_post_path %>
 
   <div class="forum-category">
     <h3>PLANT NEWS</h3>
     <ul>
-    <% @posts.category.plant_news each do |post| %>
-    <h4><%= @post.title %></h4>
-    <li><%= @post.text %></li>
-    <li><strong>by</strong><%= @post.user.name %></li>
-    <%= link_to 'Open', post_path(post) %>
-          <% if post.user.id == current_user.id %>
-            <%=link_to 'Delete', post_path(post),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-          <% end %>
-    <% end %>
+      <% if @posts.category === 'plant_news' %>
+        <% @posts.each do |post| %>
+          <h4><%= @post.title %></h4>
+          <li><%= @post.text %></li>
+          <li><strong>by</strong><%= @post.user.name %></li>
+          <%= link_to 'Open', post_path(post) %>
+                <% if post.user.id == current_user.id %>
+                  <%=link_to 'Delete', post_path(post),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %>
+                <% end %>
+        <% end %>
+      <% end %>
+    </ul>
   </div>
   <%= link_to 'New Post', new_post_path %>
-  
+
 </div>

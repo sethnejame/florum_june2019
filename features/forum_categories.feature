@@ -4,9 +4,18 @@ Feature: Basic Florum Categories
   I would like to see a main forum page with separate categories"
 
   Background:
-    Given I visit the site
+    Given the following user exists
+    | name    |
+    | Fat Bob |
+    | Slim Jim|
+    And the following post exists
+    | title        | text          | user     | category |
+    | Codeacademy  | Smooth-ride   | Fat Bob  | general  |
+    | Hacklife     | smaaaahht     | Slim Jim | general  |
+    And I am logged in as "Fat Bob" 
 
   Scenario: Visitor can see basic forum categories
+    When I visit the site
     When I click "FLORUM"
     Then I should see "MARKETPLACE"
     Then I should see "GENERAL"

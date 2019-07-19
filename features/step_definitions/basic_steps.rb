@@ -7,6 +7,7 @@ Given("the following post exists") do |table|
     user = User.find_by_name(post_hash[:user])
     FactoryBot.create(:post, post_hash.merge(user: user))
   end
+  binding.pry
 end
 
 Given("the following user(s) exists") do |table|
