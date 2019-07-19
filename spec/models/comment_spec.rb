@@ -17,7 +17,6 @@ RSpec.describe Comment, type: :model do
   describe 'Factory' do
     it 'should have valid Factory' do
       expect(FactoryBot.create(:comment)).to be_valid
-      binding.pry
     end
   end
 end
