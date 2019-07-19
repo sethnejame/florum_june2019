@@ -13,7 +13,7 @@ I would like to be able to comment on their posts"
     | Codeacademy  | Smooth-ride   | Fat Bob |
     And I am logged in as "Slim Jim"
     And I visit the site
-    And I click "FORUM"
+    And I click "FLORUM"
 
   Scenario: User can comment a post
     When I click on "Open"
