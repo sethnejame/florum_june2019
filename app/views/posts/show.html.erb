@@ -9,8 +9,32 @@
     <%= @post.text %>
   </p>
 
+<p>
+  <strong>Author:</strong>
+  <%= @post.user.name %>
+</p>
+
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
   <p>
-    <strong>Author:</strong>
-    <%= @post.user.name %>
+    <strong>Commenter:</strong>
+    <%= comment.user.name %>
   </p>
+ 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+ 
+<h2>Add a comment:</h2>
+<%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body, placeholder: 'Comment' %>
+  </p>
+  <p>
+    <%= form.submit value="Leave Comment" %>
+  </p>
+<% end %>
 </div>

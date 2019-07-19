@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   root controller: :main, action: :index
   resources :plants, only: [:new, :create, :index]
-  resources :posts, only: [:new, :create, :index, :show, :destroy]
+  resources :posts do
+    resources :comments
+  end
 end
